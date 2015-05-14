@@ -7,10 +7,9 @@ use Illuminate\Http\Request;
 
 class AboutController extends Controller {
 public function index(){
-    $data=[];
-    $data['first_name']='prabhat';
-    $data['last_name']='jha';
-    return view('forum.about',$data);
+    $friends=['prabhat','samika','pramika'];
+   //$friends=[];
+    return view('forum.about',compact('friends'));
 }
 	//
 
