@@ -20,3 +20,4 @@ Route::controllers([
 	'password' => 'Auth\PasswordController',
 ]);
 Route::get('contact','ContactController@index');
+Route::get('about','AboutController@index');
