@@ -3,7 +3,7 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class AddPublishedAtToArticlesTable extends Migration {
+class CreateArticlesTable extends Migration {
 
 	/**
 	 * Run the migrations.
@@ -12,10 +12,10 @@ class AddPublishedAtToArticlesTable extends Migration {
 	 */
 	public function up()
 	{
-		Schema::table('articles', function(Blueprint $table)
+		Schema::create('articles', function(Blueprint $table)
 		{
-			//
-                     $table->string('name');
+			$table->increments('id');
+			$table->timestamps();
 		});
 	}
 
@@ -26,10 +26,7 @@ class AddPublishedAtToArticlesTable extends Migration {
 	 */
 	public function down()
 	{
-		Schema::table('articles', function(Blueprint $table)
-		{
-			//
-		});
+		Schema::drop('articles');
 	}
 
 }
