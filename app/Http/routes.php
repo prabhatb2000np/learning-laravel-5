@@ -21,3 +21,8 @@ Route::controllers([
 ]);
 Route::get('contact','ContactController@index');
 Route::get('about','AboutController@index');
+Route::get('foo',function(){
+ return "Bar";   
+});
+Route::get('articles','ArticleController@index');
+Route:get('articles/{id}','ArticleController@show');
