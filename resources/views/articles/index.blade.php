@@ -1,9 +1,9 @@
 @extends('articles.master')
 
-@section('title', 'About Articles')
+@section('title', 'About Articles Index Page')
 @section('content')
 <p>learning by prabhat about articles</p>
-@stop
+
 <h1>Articles</h1>
 <hr>
 @foreach($articles as $article)
@@ -14,3 +14,4 @@
 </article>
 
 @endforeach
+@stop

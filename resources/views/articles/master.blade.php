@@ -3,7 +3,11 @@
         <title>
           @yield('title')
         </title>
-        <link rel="stylesheet'' href=''components/bootstrap334dist/css/bootstrap.min.js">
+        <!--link rel="stylesheet" href="components/bootstrap334dist/css/bootstrap.min.css">
+      	<script src= "components/jquery/jquery-1.11.3.min.js" ></script>
+	<script src= "components/bootstrap334dist/js/bootstrap.min.js"></script-->
+        <link href="{{ asset('components/bootstrap334dist/css/bootstrap.min.css')
+   }}" rel="stylesheet">
     </head>
     <body>
         @yield('content')

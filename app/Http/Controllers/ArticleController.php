@@ -3,8 +3,9 @@
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
-use Illuminate\Http\Request;
-
+//use Illuminate\Http\Request;
+use Request;
+use Carbon\Carbon;
 class ArticleController extends Controller {
 
 	/**
@@ -15,7 +16,7 @@ class ArticleController extends Controller {
 	public function index()
 	{
 		//
-            $articles=  \App\Article::all();
+            $articles=  \App\Article::latest('published_at')->get();
             return view('articles.index',  compact('articles'));
 	}
 
@@ -27,6 +28,7 @@ class ArticleController extends Controller {
 	public function create()
 	{
 		//
+            return view('articles.create');
 	}
 
 	/**
@@ -37,6 +39,10 @@ class ArticleController extends Controller {
 	public function store()
 	{
 		//
+            $input=Request::all();
+           $input['published_at']=Carbon::now();
+           \App\Article::create($input);
+           return redirect('articles');
 	}
 
 	/**
