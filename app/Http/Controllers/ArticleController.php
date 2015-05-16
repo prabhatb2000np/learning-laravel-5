@@ -4,7 +4,7 @@ use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
 //use Illuminate\Http\Request;
-use Request;
+//use Request;
 use Carbon\Carbon;
 class ArticleController extends Controller {
 
@@ -20,7 +20,7 @@ class ArticleController extends Controller {
             return view('articles.index',  compact('articles'));
 	}
 
-	/**
+	/** 
 	 * Show the form for creating a new resource.
 	 *
 	 * @return Response
@@ -36,12 +36,11 @@ class ArticleController extends Controller {
 	 *
 	 * @return Response
 	 */
-	public function store()
+	public function store(Requests\CreateArticleRequest $request)
 	{
 		//
-            $input=Request::all();
-           $input['published_at']=Carbon::now();
-           \App\Article::create($input);
+          
+           \App\Article::create($request->all());
            return redirect('articles');
 	}
 
