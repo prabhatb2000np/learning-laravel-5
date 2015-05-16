@@ -27,7 +27,7 @@ class Article extends Model {
         $this->attributes['published_at'] = Carbon::createFromFormat('Y-m-d', $date);
     }
 
-//Scope
+//Scope 
     public function scopePublished($query) {
         $query->where('published_at', '>=', '2015-01-01 00:00:00');
     }

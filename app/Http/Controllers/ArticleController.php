@@ -36,7 +36,7 @@ class ArticleController extends Controller {
 	 *
 	 * @return Response
 	 */
-	public function store(Requests\CreateArticleRequest $request)
+	public function store(Requests\ArticleRequest $request)
 	{
 		//
           
@@ -66,6 +66,8 @@ class ArticleController extends Controller {
 	public function edit($id)
 	{
 		//
+            $article=  \App\Article::findorfail($id);
+            return view('articles.edit',compact('article'));
 	}
 
 	/**
@@ -74,9 +76,13 @@ class ArticleController extends Controller {
 	 * @param  int  $id
 	 * @return Response
 	 */
-	public function update($id)
+	public function update($id,  Requests\ArticleRequest $request)
 	{
-		//
+//dd($id);		
+//
+            $article=  \App\Article::findorfail($id);
+            $article->update($request->all());
+            return redirect('articles');
 	}
 
 	/**
