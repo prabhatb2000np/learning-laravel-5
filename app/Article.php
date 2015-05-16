@@ -20,7 +20,8 @@ class Article extends Model {
      *
      * @var array
      */
-    protected $fillable = ['title', 'body', 'published_at'];
+    //user_id is temporary
+    protected $fillable = ['title', 'body', 'published_at','user_id'];
 
     //Mutators
     public function setPublishedAtAtrribute($date) {
@@ -31,5 +32,8 @@ class Article extends Model {
     public function scopePublished($query) {
         $query->where('published_at', '>=', '2015-01-01 00:00:00');
     }
-
+//An article is owned by a user
+    public function user(){
+        $this->belongsTo('App\User');
+    }
 }
