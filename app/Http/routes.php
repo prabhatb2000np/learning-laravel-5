@@ -30,3 +30,6 @@ Route::get('articles/{id}','ArticleController@show');
 Route::post('articles','ArticleController@store');
 Route::get('articles/{id}/edit','ArticleController@edit');*/
 Route::resource('articles','ArticleController');
+Route::get('foo',['middleware'=>'manager',function(){
+    return "This page may only be viewed by managers.";
+}]);
