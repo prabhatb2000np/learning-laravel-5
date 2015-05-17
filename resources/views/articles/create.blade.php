@@ -3,6 +3,7 @@
 @section('title', 'About Articles Create Page')
 @section('content')
 <h1>Write a new article</h1>
+<h2>{{$user_id}}</h2>
 <hr>
 
 {!!Form::open(['url'=>'articles'])!!}

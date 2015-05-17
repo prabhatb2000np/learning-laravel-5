@@ -33,7 +33,7 @@ class User extends Model implements AuthenticatableContract, CanResetPasswordCon
         
         //A user can have many articles
         public function articles(){
-$this->hasMany('App\Article');
+return $this->hasMany('App\Article');
             }
 
 }

@@ -16,6 +16,7 @@ class ArticleController extends Controller {
 	public function index()
 	{
 		//
+            //return \Auth::user();
             $articles=  \App\Article::latest('published_at')->published()->get();
             return view('articles.index',  compact('articles'));
 	}
@@ -28,7 +29,8 @@ class ArticleController extends Controller {
 	public function create()
 	{
 		//
-            return view('articles.create');
+            $user_id=\Auth::user()->id;
+            return view('articles.create',compact('user_id'));
 	}
 
 	/**
@@ -39,8 +41,13 @@ class ArticleController extends Controller {
 	public function store(Requests\ArticleRequest $request)
 	{
 		//
+                //dd(\Auth::user());
+            //return \Auth::user();
+            //$aricle['user_id']=\Auth::user()->id;
+          $article=new \App\Article($request->all());
+           //\App\Article::create($request->all());
+          \Auth::user()->articles()->save($article);
           
-           \App\Article::create($request->all());
            return redirect('articles');
 	}
 

@@ -34,6 +34,6 @@ class Article extends Model {
     }
 //An article is owned by a user
     public function user(){
-        $this->belongsTo('App\User');
+       return $this->belongsTo('App\User');
     }
 }
