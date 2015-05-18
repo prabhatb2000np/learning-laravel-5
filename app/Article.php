@@ -14,7 +14,7 @@ class Article extends Model {
      * @var string
      */
     protected $table = 'articles';
-
+    protected $dates=['published_at'];
     /**
      * The attributes that are mass assignable.
      *
