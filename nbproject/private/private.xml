@@ -3,15 +3,12 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/opt/lampp/htdocs/learning-laravel-5/app/Http/Requests/CreateArticleRequest.php</file>
-            <file>file:/opt/lampp/htdocs/learning-laravel-5/resources/views/articles/list.blade.php</file>
-            <file>file:/opt/lampp/htdocs/learning-laravel-5/app/Http/routes.php</file>
-            <file>file:/opt/lampp/htdocs/learning-laravel-5/storage/logs/laravel-2015-05-16.log</file>
-            <file>file:/opt/lampp/htdocs/learning-laravel-5/app/Http/Controllers/ArticleController.php</file>
-            <file>file:/opt/lampp/htdocs/learning-laravel-5/resources/views/articles/create.blade.php</file>
-            <file>file:/opt/lampp/htdocs/learning-laravel-5/resources/views/articles/form.blade.php</file>
-            <file>file:/opt/lampp/htdocs/learning-laravel-5/resources/views/articles/edit.blade.php</file>
-            <file>file:/opt/lampp/htdocs/learning-laravel-5/app/Article.php</file>
+            <file>file:/C:/Program%20Files/EasyPHP-DevServer-14.1VC11/data/localweb/learning-laravel-5/app/Http/Controllers/ArticleController.php</file>
+            <file>file:/C:/Program%20Files/EasyPHP-DevServer-14.1VC11/data/localweb/learning-laravel-5/resources/views/articles/show.blade.php</file>
+            <file>file:/C:/Program%20Files/EasyPHP-DevServer-14.1VC11/data/localweb/learning-laravel-5/app/Article.php</file>
+            <file>file:/C:/Program%20Files/EasyPHP-DevServer-14.1VC11/data/localweb/learning-laravel-5/app/User.php</file>
+            <file>file:/C:/Program%20Files/EasyPHP-DevServer-14.1VC11/data/localweb/learning-laravel-5/app/Providers/RouteServiceProvider.php</file>
+            <file>file:/C:/Program%20Files/EasyPHP-DevServer-14.1VC11/data/localweb/learning-laravel-5/storage/logs/laravel-2015-05-18.log</file>
         </group>
     </open-files>
 </project-private>

@@ -66,7 +66,8 @@ class ArticleController extends Controller {
      * @return Response
      */
     public function show($id) {
-        //
+//dd($article)        ;
+//
         $article = \App\Article::findorfail($id);
         return view('articles.show', compact('article'));
     }
