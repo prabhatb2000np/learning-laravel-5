@@ -5,11 +5,11 @@ var elixir = require('laravel-elixir');
 }*/
 
 elixir(function(mix) {
-   /* mix.sass('app.scss').coffee();
-    mix.styles([
+    mix.less('app.less').coffee();
+   /* mix.styles([
         'vendor/normalize.css',
         'app.css'
         
     ],'public/output/final.css','public/css');*/
-    mix.phpUnit();
+    //mix.phpUnit();
 });
