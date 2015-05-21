@@ -38,8 +38,10 @@ class ArticleController extends Controller {
 
             return redirect('articles');
         }
-        $user_id = \Auth::user()->id;
-        return view('articles.create', compact('user_id'));
+        $tags=\App\Tag::lists('name','name');
+        //dd($tags);
+        //$user_id = \Auth::user()->id;
+        return view('articles.create',compact('tags'));
     }
 
     /**
@@ -48,6 +50,8 @@ class ArticleController extends Controller {
      * @return Response
      */
     public function store(Requests\ArticleRequest $request) {
+dd($request->input('tags'));        
+//
         //
         //dd(\Auth::user());
         //return \Auth::user();
