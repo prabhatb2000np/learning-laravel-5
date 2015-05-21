@@ -38,7 +38,7 @@ class ArticleController extends Controller {
 
             return redirect('articles');
         }
-        $tags=\App\Tag::lists('name','name');
+        $tags=\App\Tag::lists('name','id');
         //dd($tags);
         //$user_id = \Auth::user()->id;
         return view('articles.create',compact('tags'));
@@ -50,15 +50,17 @@ class ArticleController extends Controller {
      * @return Response
      */
     public function store(Requests\ArticleRequest $request) {
-dd($request->input('tags'));        
+//dd($request->input('tags'));        
 //
         //
+        $tagIds=$request->input('tags');
         //dd(\Auth::user());
         //return \Auth::user();
         //$aricle['user_id']=\Auth::user()->id;
         $article = new \App\Article($request->all());
         //\App\Article::create($request->all());
-        \Auth::user()->articles()->save($article);
+        $article=\Auth::user()->articles()->save($article);
+        $article->tags()->attach($request->input('tag_list'));
         \Session::flash('flash_message','Your article has been created!');
         //flash('Your article has been created!')->important();
 
@@ -91,8 +93,9 @@ dd($request->input('tags'));
      */
     public function edit($id) {
         //
+         $tags=\App\Tag::lists('name','id');
         $article = \App\Article::findorfail($id);
-        return view('articles.edit', compact('article'));
+        return view('articles.edit', compact('article','tags'));
     }
 
     /**
