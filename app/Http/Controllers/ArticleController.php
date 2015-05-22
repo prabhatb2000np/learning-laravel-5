@@ -60,6 +60,7 @@ class ArticleController extends Controller {
         $article = new \App\Article($request->all());
         //\App\Article::create($request->all());
         $article=\Auth::user()->articles()->save($article);
+        //dd($article);
         $article->tags()->attach($request->input('tag_list'));
         \Session::flash('flash_message','Your article has been created!');
         //flash('Your article has been created!')->important();
@@ -108,7 +109,10 @@ class ArticleController extends Controller {
 //dd($id);		
 //
         $article = \App\Article::findorfail($id);
+        
         $article->update($request->all());
+        //dd($article);
+        $article->tags()->sync($request->input('tag_list'));
         return redirect('articles');
     }
 
