@@ -1,2 +1,6 @@
 [22-May-2015 08:52:32 UTC] PHP Fatal error:  Call to a member function tags() on a non-object in C:\Program Files\EasyPHP-DevServer-14.1VC11\data\localweb\learning-laravel-5\app\Http\Controllers\ArticleController.php on line 112
 [22-May-2015 17:17:47 UTC] PHP Fatal error:  Call to a member function tags() on a non-object in C:\Program Files\EasyPHP-DevServer-14.1VC11\data\localweb\learning-laravel-5\app\Http\Controllers\ArticleController.php on line 115
+[24-May-2015 16:04:21 UTC] PHP Fatal error:  Class 'App\Repositories\FooRepository' not found in C:\Program Files\EasyPHP-DevServer-14.1VC11\data\localweb\learning-laravel-5\app\Http\Controllers\FooController.php on line 14
+[24-May-2015 16:06:07 UTC] PHP Fatal error:  Class 'App\Repositories\FooRepository' not found in C:\Program Files\EasyPHP-DevServer-14.1VC11\data\localweb\learning-laravel-5\app\Http\Controllers\FooController.php on line 14
+[24-May-2015 16:07:16 UTC] PHP Fatal error:  Class 'Controller' not found in C:\Program Files\EasyPHP-DevServer-14.1VC11\data\localweb\learning-laravel-5\app\Repositories\FooRepository.php on line 2
+[24-May-2015 16:09:42 UTC] PHP Fatal error:  Class 'App\Repositories\FooRepository' not found in C:\Program Files\EasyPHP-DevServer-14.1VC11\data\localweb\learning-laravel-5\app\Http\Controllers\FooController.php on line 14
