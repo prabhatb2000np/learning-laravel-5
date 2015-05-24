@@ -7,6 +7,7 @@ class Tag extends Model {
     protected $fillable=['name'];
 	//Get the articles associated with the given tag.
 public function articles(){
-    return $this->belongsToMany('App\Article',"tags_pivot","article_identifier");
+   // return $this->belongsToMany('App\Article',"tags_pivot","article_identifier");
+    return $this->belongsToMany('App\Article');
 }
 }

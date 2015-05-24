@@ -27,7 +27,12 @@ class Article extends Model {
     public function setPublishedAtAtrribute($date) {
         $this->attributes['published_at'] = Carbon::createFromFormat('Y-m-d', $date);
     }
-
+/*
+ * Get published at.
+ */
+    public function getPublishedAtAttribute($date){
+        return new Carbon($date);
+    }
 //Scope 
     public function scopePublished($query) {
         $query->where('published_at', '>=', '2015-01-01 00:00:00');
@@ -45,4 +50,7 @@ class Article extends Model {
     public function getTagListAttribute(){
         return $this->tags->lists('id');
     }
+    /*
+     * 
+     */
 }
