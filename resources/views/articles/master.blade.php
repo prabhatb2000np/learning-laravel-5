@@ -11,13 +11,15 @@
             <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.0/css/select2.min.css" rel="stylesheet">
     </head>
     <body>
+ @include('articles.nav')
        @if(\Session::has('flash_message'))
        <div class='alert alert-success'>{{\Session::get('flash_message')}}</div>
        @endif
     
        
         @yield('content')
-         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.js"></script>
+         <!--script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.js"></script-->
+         <script src="{{asset('components/jquery/jquery-1.11.3.min.js')}}"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.0/js/select2.min.js"></script>
        
         @yield('footer')

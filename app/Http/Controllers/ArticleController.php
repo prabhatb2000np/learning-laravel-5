@@ -23,6 +23,7 @@ class ArticleController extends Controller {
         //
         //return \Auth::user();
         $articles = \App\Article::latest('published_at')->published()->get();
+        //$latest=\App\Article::latest()->first();
         return view('articles.index', compact('articles'));
     }
 

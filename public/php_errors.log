@@ -1,0 +1,2 @@
+[22-May-2015 08:52:32 UTC] PHP Fatal error:  Call to a member function tags() on a non-object in C:\Program Files\EasyPHP-DevServer-14.1VC11\data\localweb\learning-laravel-5\app\Http\Controllers\ArticleController.php on line 112
+[22-May-2015 17:17:47 UTC] PHP Fatal error:  Call to a member function tags() on a non-object in C:\Program Files\EasyPHP-DevServer-14.1VC11\data\localweb\learning-laravel-5\app\Http\Controllers\ArticleController.php on line 115
